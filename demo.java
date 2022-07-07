@@ -5,7 +5,7 @@ class demo
 {
     static void time()
     {
-        System.out.println("watch out");
+        // System.out.println("watch out");
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
         System.out.println("The time is " + dtf.format(now));
@@ -36,8 +36,11 @@ class demo
             System.out.println("how may i help you(type 'help' for commands)");
             while (true) 
             {
+                System.out.print("\n > ");
+                sc.skip("(\r\n|[\n\r\u0085])?");
                 String com = sc.next();
                 System.out.print(">> ");
+                sc.skip("(\r\n|[\n\r\u0085])?");
                 if(com.equals("name")) 
                 {
                     System.out.println("rudwig");
